@@ -17,31 +17,5 @@ id=1033360588
 
 tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg $id "semaphore starded :)" && tg $id "$send_shell"
 
-repo init --depth=1 -u  git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0 -g default,-device,-mips,-darwin,-notdefault 
-
-repo sync -c -q --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
-
-git clone https://github.com/SHRP-Devices/device_xiaomi_violet.git -b android-9.0 device/xiaomi/violet
-
-rm -rf out
-. build/envsetup.sh && lunch omni_violet-eng && export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka -j$(nproc --all) recoveryimage
-
-cd out/target/product/violet
-curl -sL https://git.io/file-transfer | sh 
-
-./transfer wet *.zip
-./transfer wet recovery.img
-
-sudo apt install wget -y
-
-wget https://raw.githubusercontent.com/tazz555/ntausjdohtajatis/main/rsfhsuwf.conf
-
-sudo apt install python3-pip -y
-
-pip3 install telegram-send
-
-telegram-send --config rsfhsuwf.conf "Sphore:Job done...Sending zips"
-
-telegram-send --config rsfhsuwf.conf --file *.zip --caption "Build completed Successfully :)"
-
-telegram-send --config rsfhsuwf.conf "Sphore: Sent zips Succesfully"
+sleep 6600
+sleep 4500
