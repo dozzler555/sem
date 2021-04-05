@@ -3,9 +3,6 @@ mkdir -p /tmp/recovery
 cd /tmp/recovery
 apt install tmate -y
 apt install git -y
-git config --global user.name "Dazzler555"
-git config --global user.email "71560605+Dazzler555@users.noreply.github.com"
-git config --global color.ui false
 tg(){
 	bot_api=1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U
 	your_telegram_id=$1
